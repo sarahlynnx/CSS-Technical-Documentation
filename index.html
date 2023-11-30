@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>CSS Technical Documentation</title>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css"/>
+  </head>
+  <body>
+    <nav id = "navbar">
+      <h1>CSS Documentation</h1>
+      <ul>
+        <li><a class = "nav-link" href = "#Introduction">Introduction</a></li>
+        <li><a class = "nav-link" href = "#Prerequisites">Prerequisites</a></li>
+        <li><a class = "nav-link" href = "#CSS_Syntax">CSS Syntax</a></li>
+        <li><a class = "nav-link" href = "#Box_Model">Box Model</a></li>
+        <li><a class = "nav-link" href = "#Layout_and_Positioning">Layout and Positioning</a></li>
+        <li><a class = "nav-link" href = "#Responsive_Web_Design">Responsive Web Design</a></li>
+        <li><a class = "nav-link" href = "#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id = "main-doc">
+
+      <section id = "Introduction" class = "main-section">
+        <h2>Introduction</h2>
+        <p>CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation and formatting of HTML documents.</p>
+        <p>CSS is used to style and layout web pages by altering the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
+        <p> By keeping the styling separate from the HTML content, it becomes easier to update the appearance of multiple pages without modifying the underlying structure.</p>
+      </section>
+
+      <section id = "Prerequisites" class = "main-section">
+        <h2>Prerequisites</h2>
+        <p>This guide assumes you have the following background:</p>
+        <ul>
+          <li>General understanding of computers and the web.</li>
+          <li>Working knowledge of basic HTML.</li>
+          <li>Good understanding of how to create and manage files.</li>
+        </ul>
+      </section>
+
+      <section id = "CSS_Syntax" class = "main-section">
+        <h2>CSS Syntax</h2>
+        <p>In CSS, selectors are used to target HTML elements that require styling. Common selectors include element selectors, class selectors, ID selectors, and attribute selectors.</p>
+        
+        <div class = "inline">
+          <pre>
+          <code>
+/* Element Selector */
+
+p {
+  color: blue;
+}
+          </code>
+          </pre>
+
+          <pre>
+          <code>
+/* Class Selector */
+
+.my-class {
+  font-size: 16px;
+}
+          </code>
+          </pre>
+
+          <pre>
+          <code>
+/* ID Selector */
+
+#header {
+  background-color: #f2f2f2;
+}
+          </code>
+          </pre>
+
+          <pre>
+          <code>
+/* Attribute Selector */
+
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+          </code>
+          </pre>
+        </div>
+        <p>CSS properties define the various styling options, and values determine the appearance of the selected elements. Properties and values are written in pairs, separated by a colon.</p>
+        <div class = "inline">
+          <pre>
+          <code>
+/* Property: Value */
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+}
+          </code>
+          </pre>
+        </div>
+      </section>
+
+      <section id = "Box_Model" class = "main-section">
+        <h2>Box Model</h2>
+        <ul class = "custom-list">
+          <li>The margin is the space between the element's border and any adjacent elements. It provides the distance between one element and another.</li>
+          <li>The border surrounds the padding and content and forms a visible boundary around the element. It can be solid, dashed, dotted, or have other styles.</li>
+          <li>The padding is the space between the content area and the element's border. It creates an area of extra spacing around the content.</li>
+          <li>The content area is the innermost part of the box, representing the actual content of the HTML element, such as text, images, or other media. It is determined by the width and height properties of the element.</li>
+        </ul>
+        <img src = "https://www.freecodecamp.org/news/content/images/2021/08/Screen-Shot-2021-08-03-at-1.38.36-AM.png" alt = "Box Model">
+      </section>
+      
+      <section id = "Layout_and_Positioning" class = "main-section">
+        <h2>Layout and Positioning</h2>
+        <p>Positioning allows you to take elements out of normal document flow and make them behave differently, for example, by sitting on top of one another or by always remaining in the same place inside the browser viewport.</p>
+        <p>The display property determines how an element should be rendered in the document flow.</p>
+        <div class = "inline">
+          <pre>
+          <code>
+.element {
+  display: block; /* or inline, inline-block, flex, grid, etc. */
+}
+          </code>
+          </pre>
+        </div>
+        <p>The position property controls the positioning of an element relative to its containing element. The top, right, bottom, and left properties determine the final location of positioned elements.</p>
+        <div class = "inline">
+          <pre>
+          <code>
+.element {
+  position: relative; /* or absolute, fixed, sticky, static */
+  top: 20px;
+  left: 10px;
+}
+          </code>
+          </pre>
+        </div>
+        <p>Flexbox is a layout model that provides an efficient way to align and distribute space among items in a container.</p>
+        <div class = "inline">
+          <pre>
+          <code>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+          </code>
+          </pre>
+        </div>
+      </section>
+      
+      <section id = "Responsive_Web_Design" class = "main-section">
+        <h2>Responsive Web Design</h2>
+        <p>Media queries enable developers to apply different styles based on the device's screen size and resolution.</p>
+        <div class = "inline">
+          <pre>
+          <code>
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+}
+          </code>
+          </pre>
+        </div>
+        <p>The viewport meta tag ensures that a web page scales properly on different devices.</p>
+        <div class = "inline">
+          <pre>
+          <code>
+meta name="viewport" content="width=device-width, initial-scale=1.0"
+          </code>
+          </pre>
+        </div>
+      </section>
+      
+      <section class = "main-section" id = "Reference">
+        <h2>Reference</h2>
+        <ul>
+          <li class = "reference">All documentation found on this page is taken from <a target = "_blank" href = "https://developer.mozilla.org/en-US/docs/Learn/CSS">MDN</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
